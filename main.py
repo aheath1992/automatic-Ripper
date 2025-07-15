@@ -20,4 +20,13 @@ try:
 except Exception as e:
     print(f"Error uploading file: {e}")
 
+# looking for mp4 files 
+import glob
+# specific directory
+directory_path = "path/to/you/directory"
+mp4_files = glob.glob(f'{directory_path}/*.mp4')
+
+#process the results
+for file_path in mp4_files:
+    print (file_path)
 
