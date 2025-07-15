@@ -1,5 +1,22 @@
 # Automatic ripping from dvd mp4, then saving it to the jellyfin server
 
+#mkv to mp4 convertion 
+import subprocess
+
+input_file = "your_input_file.mpk"
+output_file = "your_output_file.mp4"
+
+command = ["ffmpeg", "-i", input_file, "-c", "copy", output_file]
+
+try:
+    subprocess.run(command, check=True)
+    print (f"successfully converted {input_file} to {output_file}")
+except subprocess.CalledProcessError as e:
+    print (f"error durring conversion {e}")
+except FileNotFoundError:
+    print ("FFmpeg not found.")
+
+
 # looking for mp4 files 
 import glob
 
