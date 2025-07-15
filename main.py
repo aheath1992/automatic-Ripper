@@ -2,6 +2,7 @@
 
 # looking for mp4 files 
 import glob
+
 # specific directory
 directory_path = "path/to/you/directory"
 mp4_files = glob.glob(f'{directory_path}/*.mp4')
@@ -15,7 +16,7 @@ import paramiko
 
 hostname = "jf1.example.com"
 username = "root"
-private_Key_Path = '/path/to/your.private_key'
+private_Key_Path = 'path/to/your.private_key'
 local_path = 'path/to/your/local/video.mp4'
 remote_path = 'path/on/server/video.mp4'
 
